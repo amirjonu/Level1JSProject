@@ -82,12 +82,13 @@ third.addEventListener("click", ()=>{
 });
 
 function checkGame(){
+    if (lives>0){
     numberclicked=1;
     const result= document.getElementById("result");
     let sum= one+""+ two+ ""+three;
     let answer= uno+""+dos+""+tres;
    if (lives==1){
-        result.textContent= `Your guess is wrong. You lose. The code was ${answer}`;
+        result.textContent= `You lose. The code was ${answer}`;
         lives= lives-1;
         numLives.textContent=`Lives: ${lives}`;
     }else{
@@ -104,6 +105,7 @@ function checkGame(){
     }
     previousNumber.textContent= `Previous Number: ${sum}`;
     clearGuess();
+}
 }
 }
 
