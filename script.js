@@ -87,7 +87,7 @@ function checkGame() {
         const result = document.getElementById("result");
         let sum = one + "" + two + "" + three;
         let answer = uno + "" + dos + "" + tres;
-        if (lives == 1) {
+        if (lives == 1 && answer != sum) {
             result.textContent = `You lose. The code was ${answer}`;
             lives = lives - 1;
             numLives.textContent = `Lives: ${lives}`;
